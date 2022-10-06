@@ -37,7 +37,7 @@ const Recipes = () => {
                 <h2>{recipe.name}</h2>
                 <h3>{recipe.type}</h3>
                 <GatsbyImage image={image} alt={recipe.name} />
-                <Link to={`/recipes/${recipe.slug}`}>lien vers la recette</Link>
+                <Link to={`/recipes/${recipe.slug}`}><button>lien vers la recette</button></Link>
             </article>
             )
           })}
