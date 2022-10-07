@@ -20,7 +20,14 @@ const Header = () => {
   const data = useStaticQuery(getData);
   return (
     <div className='header'>
-        <StaticImage src="../images/banner.jpg" alt="a banner" className='banner' />
+        <StaticImage src="../images/banner.jpg" alt="a banner"       
+        placeholder="blurred"
+
+        objectFit="cover"
+        objectPosition="bottom"
+        width={1280}
+        height={400}
+        />
         <h1 className='siteTitle'>
             {data.site.siteMetadata.title}
         </h1>

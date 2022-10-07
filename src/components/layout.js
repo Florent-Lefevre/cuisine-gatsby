@@ -8,9 +8,13 @@ const layout = ({children}) => {
   return (
     <>
         <Navbar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className='layout'>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+        <div className='bgFooter'></div>
+        <div className='footer'></div>
     </>
   )
 }

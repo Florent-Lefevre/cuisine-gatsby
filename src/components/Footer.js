@@ -5,7 +5,15 @@ const Footer = () => {
   return (
     <div>
         <h1>Footer</h1>
-        <StaticImage src="../images/footer.jpg" alt="a footer" />
+        <StaticImage src="../images/footer.jpg" alt="a footer"
+          objectPosition="bottom"
+          width={1280}
+          height={400}
+                  placeholder="blurred"
+
+        objectFit="cover" />
+
+
     </div>
   )
 }

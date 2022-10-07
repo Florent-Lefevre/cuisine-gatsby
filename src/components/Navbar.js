@@ -5,7 +5,7 @@ import {faHouse, faBars, faXmark} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 
-    const [navVisibility, setNavVisibility] = useState(false);
+    const [navVisibility, setNavVisibility] = useState(true);
     const visibilityToggle = () => {
         setNavVisibility(!navVisibility)
     }
@@ -15,7 +15,7 @@ const Navbar = () => {
                 { navVisibility ? 
                     <>
                         <li>
-                            <Link to ="/"><FontAwesomeIcon icon={faHouse} /></Link>
+                            <Link to ="/"><FontAwesomeIcon icon={faHouse} className="navLink" /></Link>
                         </li>
                         <li>
                             <Link to ="/recipes"  className="navLink ">Recettes</Link>
@@ -27,7 +27,7 @@ const Navbar = () => {
                         : ""
                     }
                         
-                        <span onClick={visibilityToggle} className="navIcon">{ navVisibility ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}</span>
+                        <span onClick={visibilityToggle} className="navIcon navLink" >{ navVisibility ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}</span>
                 </ul>
             </nav>
     )
