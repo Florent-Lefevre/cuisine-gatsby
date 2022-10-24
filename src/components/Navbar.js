@@ -2,34 +2,38 @@ import React, {useState} from 'react'
 import {Link} from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouse} from '@fortawesome/free-solid-svg-icons'
+import { Button, Collapse } from 'react-bootstrap'
 
 const Navbar = () => {
-
+  const [isVisible, initHs] = useState(false)
+  const invokeCollapse = () => {
+    return initHs(!isVisible)
+  }
 
     return (
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarToggle">
-                        <a class="navbar-brand" href="#">Logo</a>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link" /></Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link to ="/recipes"  className="nav-link">Recettes</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link to ="/about"  className="nav-link">A propos</Link>
-                            </li>
-                        </ul>
-                    </div>
+            <nav className="navbar navbar-expand-lg bg-light">
+                <div className="container-fluid">
+                    <Button className="navbar-toggler bg-light" type="button"  onClick={invokeCollapse}>
+                    <span className="navbar-toggler-icon"></span>
+                    </Button>
+                    <Collapse in={isVisible}>
+                        <div className="navbar-collapse">
+                            <a className="navbar-brand d-none d-lg-block" href="#">Logo</a>
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0  align-items-end">
+                                <li className="nav-item">
+                                    <Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link" /></Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to ="/recipes"  className="nav-link">Recettes</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to ="/about"  className="nav-link">A propos</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </Collapse>
                 </div>
             </nav>
-
-
 )
 }
 

@@ -30,11 +30,11 @@ const Recipes = () => {
 
     return (
         <Layout>
-          <div className="row">
+          <div className="row justify-content-center">
           {recipes.map(recipe => {
               const image = getImage(recipe.picture)
             return (
-            <article key={recipe.id} class="card col-3 mx-3">
+            <article key={recipe.id} class="card col-3 m-4">
                 <GatsbyImage image={image} alt={recipe.name} class="card-img-top" />
                 <div class="card-body">
                   <h2>{recipe.name}</h2>

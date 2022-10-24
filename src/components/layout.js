@@ -11,9 +11,9 @@ const layout = ({children}) => {
         <Navbar />
         <div className='layout'>
           <Header />
-          <div className='row'>
-          <div className='col-2'></div>
-          <main className='col-10'>{children}</main>
+          <div className='container-sm bg-dark'>
+            {/* <div className='col-2'></div> */}
+            <main>{children}</main>
           </div>
           <Footer />
         </div>
