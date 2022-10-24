@@ -30,17 +30,21 @@ const Recipes = () => {
 
     return (
         <Layout>
+          <div className="row">
           {recipes.map(recipe => {
               const image = getImage(recipe.picture)
             return (
-            <article key={recipe.id}>
-                <h2>{recipe.name}</h2>
-                <h3>{recipe.type}</h3>
-                <GatsbyImage image={image} alt={recipe.name} />
-                <Link to={`/recipes/${recipe.slug}`}><button>lien vers la recette</button></Link>
+            <article key={recipe.id} class="card col-3 mx-3">
+                <GatsbyImage image={image} alt={recipe.name} class="card-img-top" />
+                <div class="card-body">
+                  <h2>{recipe.name}</h2>
+                  <p>{recipe.type}</p>
+                  <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-primary">lien vers la recette</button></Link>
+                </div>
             </article>
             )
           })}
+          </div>
         </Layout>
 
     )
