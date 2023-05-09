@@ -4,10 +4,10 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: 'Quicksand', sans-serif; */
+
 }
 
-/* :root {
+:root {
     --main-title : #EF3E36;
     --second-title : #17BEBB;
     --third-title : #FAD8D6;
@@ -90,7 +90,8 @@ li {
 }
 
 .banner {
+
     max-height: 10rem;
     object-fit: cover;
     object-position: 0 -20%;
-} */
+}

@@ -31,7 +31,7 @@ const recipeTemplate = ({ data:{recipe:{name,type,ingredients:{ingredients},step
             <div>
                 <Link to="/recipes">retour aux recettes</Link>
                 <h1>nom : {name}</h1>
-                <GatsbyImage image={image} alt={name} />
+                <GatsbyImage image={image} alt={name} placeholder="blurred"/>
             </div>
         </Layout>
     )

@@ -25,7 +25,7 @@ const Header = () => {
 
         objectFit="cover"
         objectPosition="bottom"
-        width={1280}
+        width={1920}
         height={400}
         />
         <h1 className='siteTitle'>

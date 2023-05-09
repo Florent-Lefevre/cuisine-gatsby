@@ -8,7 +8,7 @@ const getData = graphql`
     allContentfulCuisineGatsby {
       nodes {
         picture {
-          gatsbyImageData
+          gatsbyImageData(height: 250)
         }
         name
         ingredients {
@@ -30,20 +30,34 @@ const Recipes = () => {
 
     return (
         <Layout>
-          <div className="row justify-content-center">
-          {recipes.map(recipe => {
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {recipes.map(recipe => {
               const image = getImage(recipe.picture)
-            return (
-            <article key={recipe.id} class="card col-3 m-4">
-                <GatsbyImage image={image} alt={recipe.name} class="card-img-top" />
-                <div class="card-body">
-                  <h2>{recipe.name}</h2>
-                  <p>{recipe.type}</p>
-                  <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-primary">lien vers la recette</button></Link>
-                </div>
-            </article>
-            )
-          })}
+              return (
+                <article key={recipe.id} class="col">
+                  <div class="card shadow-sm">
+                    <GatsbyImage image={image} 
+                    alt={recipe.name} 
+                    placeholder="blurred"
+                    class="bd-placeholder-img card-img-top"/>
+                    <div class="card-body">
+                      <p class="card-text">{recipe.name}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-sm btn-outline-secondary">J'accède à la recette</button></Link>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">{recipe.type}</small>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+              )
+            })}
+
+            </div>
           </div>
         </Layout>
 

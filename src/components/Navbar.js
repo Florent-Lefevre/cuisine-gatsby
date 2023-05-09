@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return (
             <nav className="navbar navbar-expand-lg bg-light">
-                <div className="container-fluid">
+                <div className="container-fluid layout">
                     <Button className="navbar-toggler bg-light" type="button"  onClick={invokeCollapse}>
                     <span className="navbar-toggler-icon"></span>
                     </Button>
