@@ -46,7 +46,6 @@ const Recipes = () => {
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-sm btn-outline-secondary">J'accède à la recette</button></Link>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                         </div>
                         <small class="text-body-secondary">{recipe.type}</small>
                       </div>
