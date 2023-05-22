@@ -11,13 +11,9 @@ const layout = ({children}) => {
   return (
     <>
         <Navbar />
-        <div className='layout'>
-          <Header />
+        <Header />
             <main>{children}</main>
-          <Footer />
-        </div>
-        <div className='bgFooter'></div>
-        <div className='footer'></div>
+        <Footer />
     </>
   )
 }

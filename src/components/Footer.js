@@ -3,15 +3,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Footer = () => {
   return (
-    <div>
+    <div className='banner'>
         <h1>Footer</h1>
         <StaticImage src="../images/footer.jpg" alt="a footer"
           objectPosition="bottom"
           width={1280}
           height={400}
-                  placeholder="blurred"
-
-        objectFit="cover" />
+          placeholder="blurred"
+          objectFit="cover" />
 
 
     </div>

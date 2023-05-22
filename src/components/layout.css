@@ -7,91 +7,10 @@ body {
 
 }
 
-:root {
-    --main-title : #EF3E36;
-    --second-title : #17BEBB;
-    --third-title : #FAD8D6;
-    --dark-bg : #2E282A;
-    --light-bg : #EDB88B;
-
-}
-h1 {
-    font-family: 'Pacifico', cursive;
-    color : green
-}
-
-ul {
-    list-style: none;
-    font-family: 'Pacifico', cursive;
-    font-size: 18px;
-}
-
-li {
-    display: inline-block;
-    margin: 0 1em 0 1em;
-    
-}
-
-.layout {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bgMenu{
-
-    background-color: var(--dark-bg);
-    box-shadow: 0px 3px 0px 0px var(--third-title);
-}
-.footer{
-    width: 100%;
-    background-color: var(--dark-bg);
-    height: 4px;
-}
-.bgFooter{
-    width: 100%;
-    background-color: var(--third-title);
-    height: 8px;
-
-}
-
-.navMenu {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    
-}
-
-.navLink {
-    text-decoration: none;
-    color: var(--third-title);
-
-}
 
 
-
-.navIcon {
-    position: fixed;
-
-    right: 20px;
-}
-
-.header {
+.banner {
     position: relative;
     text-align: center;
 }
 
-.siteTitle{
-    position: absolute;
-    top: 10%;
-    left: 1%;
-    right: 1%;
-
-}
-
-.banner {
-
-    max-height: 10rem;
-    object-fit: cover;
-    object-position: 0 -20%;
-}

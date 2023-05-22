@@ -10,7 +10,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata:{
     title: 'Cuisine Gatsby',
-    description: 'Site où vous pouvez retrouver mes recettes de cuisine',
+    description: 'Retrouvez mes recettes de cuisine',
+    heroe: `Qui ne s'est jamais perdu entre 2 publicité et 4 vidéos pour obtenir la liste des ingrédients de simple cookies. Vous trouverez ici mes recettes simples et approuvées.`,
     author: 'Florent Lefèvre'
   },
   /* Your site config here */
