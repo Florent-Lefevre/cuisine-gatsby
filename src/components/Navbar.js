@@ -20,9 +20,9 @@ const Navbar = () => {
                         <div className="navbar-collapse">
                             <header class="d-flex flex-wrap justify-content-center">
                                 <ul class="nav nav-pills align-items-center">
-                                    <li className="nav-item"><Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link" /></Link></li>
-                                    <li className="nav-item"><Link to ="/recipes"  className="nav-link">Recettes</Link></li>
-                                    <li className="nav-item"><Link to ="/about"  className="nav-link">A propos</Link></li>
+                                    <li className="nav-item"><Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link text-success" /></Link></li>
+                                    <li className="nav-item"><Link to ="/recipes"  className="nav-link text-success">Recettes</Link></li>
+                                    <li className="nav-item"><Link to ="/about"  className="nav-link text-success">A propos</Link></li>
                                 </ul>
                             </header>
                         </div>

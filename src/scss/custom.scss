@@ -1,11 +1,11 @@
-$primary: #ff8e3c;
-$secondary: #ff8e3c;
+$primary: #0d0d0d;
+$secondary: #2a2a2a;
 $success: #ff8e3c;
-$info: #ff8e3c;
-$warning: #ff8e3c;
-$danger: #ff8e3c;
-$light: #ff8e3c;
-$dark: #ff8e3c;
+$info: #d9376e;
+// $warning: #ff8e3c;
+// $danger: #ff8e3c;
+$light: #eff0f3;
+// $dark: #ff8e3c;
 
-@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 

@@ -35,10 +35,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-      implementation: require("sass"),
-      },
+    resolve: `gatsby-plugin-sass`,
+    options: {
+    implementation: require("sass"),
     },
+  },
   ],
 }
