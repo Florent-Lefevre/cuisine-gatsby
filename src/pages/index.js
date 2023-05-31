@@ -37,7 +37,7 @@ export default function Home() {
             <p className="lead">{data.site.siteMetadata.heroe}</p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                 <Link to ="/recipes">
-                  <button type="button" className="btn btn-success btn-lg px-4 me-md-2">
+                  <button type="button" className="btn btn-success btn-lg text-light px-4 me-md-2">
                       Mes recettes
                   </button>
                 </Link>

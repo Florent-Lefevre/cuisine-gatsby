@@ -30,32 +30,34 @@ const Recipes = () => {
 
     return (
         <Layout>
-          <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {recipes.map(recipe => {
-              const image = getImage(recipe.picture)
-              return (
-                <article key={recipe.id} class="col">
-                  <div class="card shadow-sm">
-                    <GatsbyImage image={image} 
-                    alt={recipe.name} 
-                    placeholder="blurred"
-                    class="bd-placeholder-img card-img-top"/>
-                    <div class="card-body">
-                      <p class="card-text">{recipe.name}</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-sm btn-outline-secondary bg-success">Recette</button></Link>
+          <div className="bg-light">
+            <div class="container col-xxl-10 px-4 py-5">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {recipes.map(recipe => {
+                const image = getImage(recipe.picture)
+                return (
+                  <article key={recipe.id} class="col">
+                    <div class="card shadow-sm m-2">
+                      <GatsbyImage image={image} 
+                      alt={recipe.name} 
+                      placeholder="blurred"
+                      class="bd-placeholder-img card-img-top"/>
+                      <div class="card-body">
+                        <h4 class="card-text text-center text-primary pb-3">{recipe.name}</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-success text-light px-4 me-md-2">Recette</button></Link>
+                          </div>
+                          <small class="text-body-secondary fst-italic">{recipe.type}</small>
                         </div>
-                        <small class="text-body-secondary">{recipe.type}</small>
                       </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
 
-              )
-            })}
+                )
+              })}
 
+              </div>
             </div>
           </div>
         </Layout>
