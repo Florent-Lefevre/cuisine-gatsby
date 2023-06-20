@@ -46,7 +46,7 @@ const Recipes = () => {
         <Layout>
           <div className="bg-light">
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            {/* <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
               <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"/>
               <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
 
@@ -55,7 +55,7 @@ const Recipes = () => {
 
               <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
               <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-            </div>
+            </div> */}
             
             <div class="container col-xxl-10 px-4 py-5">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

@@ -41,7 +41,7 @@ export default function Home() {
                       Mes recettes
                   </button>
                 </Link>
-              <button type="button" className="btn btn-outline-secondary btn-lg px-4">Contactez-moi</button>
+              <button type="button" className="btn btn-outline-secondary btn-lg px-4">A propos de moi</button>
             </div>
           </div>
         </div>
