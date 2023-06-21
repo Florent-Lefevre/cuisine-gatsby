@@ -3,10 +3,9 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
   return (
-    <div className='banner bg-light'>
+    <div className='bg-dark banner bg-light'>
         <StaticImage src="../images/banner.jpg" alt="a banner"       
         placeholder="blurred"
-
         objectFit="cover"
         objectPosition="bottom"
         width={1920}
