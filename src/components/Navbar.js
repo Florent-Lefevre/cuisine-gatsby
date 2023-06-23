@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
+import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import {Link} from "gatsby"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHouse} from '@fortawesome/free-solid-svg-icons'
 
 
 const getData = graphql`
@@ -17,10 +16,10 @@ const getData = graphql`
 
 const Navbar = () => {
     const data = useStaticQuery(getData);
-    const [isVisible, initHs] = useState(false)
-    const invokeCollapse = () => {
-        return initHs(!isVisible)
-    }
+    // const [isVisible, initHs] = useState(false)
+    // const invokeCollapse = () => {
+    //     return initHs(!isVisible)
+    // }
 
     return (
             <nav class="container">
@@ -29,9 +28,9 @@ const Navbar = () => {
                     <span class="fs-4 align-items-center customTitle">{data.site.siteMetadata.title}</span>
                 </a>
                 <ul class="nav nav-pills align-items-center">
-                    <li className="nav-item"><Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link text-success" /></Link></li>
-                    <li className="nav-item"><Link to ="/recipes"  className="nav-link text-success">Mes recettes</Link></li>
-                    <li className="nav-item"><Link to ="/about"  className="nav-link text-success">A propos</Link></li>
+                    <li className="nav-item"><Link to ="/" activeClassName={ "active bg-success text-light" } className="nav-link text-success" >Accueil</Link></li>
+                    <li className="nav-item"><Link to ="/recipes" activeClassName={ "active bg-success text-light" }  className="nav-link text-success">Mes recettes</Link></li>
+                    <li className="nav-item"><Link to ="/about" activeClassName={ "active bg-success text-light" } className="nav-link text-success">A propos</Link></li>
                 </ul>
                 </header>
             </nav>

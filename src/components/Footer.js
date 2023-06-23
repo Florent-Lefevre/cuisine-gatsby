@@ -1,10 +1,25 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
+const getData = graphql`
+    {
+        site {
+            siteMetadata {
+            email
+            linkedin
+            github
+            }
+        }
+        }
+    `;
+    
 const Footer = () => {
+  const data = useStaticQuery(getData);
+  const email = "mailto:"+data.site.siteMetadata.email;
+    
   return (
     <div class="bg-dark px-5 py-5 text-center">
             <nav class="container">
@@ -15,9 +30,9 @@ const Footer = () => {
                       <li className="nav-item"><Link to ="/about"  className="nav-link text-white">A propos</Link></li>
                   </ul>
                   <ul class="nav nav-pills align-items-center">
-                      <li className="nav-item"><FontAwesomeIcon icon={faEnvelope} className="nav-link text-white"/></li>
-                      <li className="nav-item"><FontAwesomeIcon icon={faLinkedin} className="nav-link text-white"/></li>
-                      <li className="nav-item"><FontAwesomeIcon icon={faGithub} className="nav-link text-white"/></li>
+                      <a href={email} target="_blank"><li className="nav-item"><FontAwesomeIcon icon={faEnvelope} className="nav-link text-white"/></li></a>
+                      <a href={data.site.siteMetadata.linkedin} target="_blank"><li className="nav-item"><FontAwesomeIcon icon={faLinkedin} className="nav-link text-white"/></li></a>
+                      <a href={data.site.siteMetadata.github} target="_blank"><li className="nav-item"><FontAwesomeIcon icon={faGithub} className="nav-link text-white"/></li></a>
                   </ul>
                 </header>
             </nav>

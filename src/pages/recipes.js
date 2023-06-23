@@ -73,7 +73,7 @@ const Recipes = () => {
                         <h4 class="card-text text-center text-primary pb-3">{recipe.name}</h4>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-success text-light px-4 me-md-2">Recette</button></Link>
+                            <Link to={`/recipes/${recipe.slug}`}><button type="button" class="btn btn-success btn-lg text-light px-4 me-md-2">Recette</button></Link>
                           </div>
                           <div><h4 className="text-body-secondary">{iconType(recipe.type)}</h4></div>
                         </div>
