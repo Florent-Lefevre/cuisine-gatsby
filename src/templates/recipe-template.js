@@ -58,7 +58,13 @@ export const query = graphql`
                 <div class="col-11 col-md-6">
                   <h1 className="card-text text-center text-info">{name}</h1>
                   {/* <small className="text-body-secondary fst-italic">{type}</small> */}
-                  <GatsbyImage image={image} alt={name} placeholder="blurred" class="d-flex flex-wrap justify-content-center rounded"/>
+                  <GatsbyImage 
+                  image={image} 
+                  alt={name} 
+                  placeholder="blurred" 
+                  width={200}
+                  height={200}
+                  class="d-flex flex-wrap justify-content-center rounded"/>
                   <div className="py-5">
                     {stepsArray.map((step)=> {
                         step = step[0].toUpperCase() + step.slice(1);
