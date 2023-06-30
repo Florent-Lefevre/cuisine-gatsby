@@ -34,19 +34,19 @@ export const query = graphql`
     return (
       <Layout>
         <div className="bg-light">
-            <div class="container">
-              <div class="d-flex flex-wrap justify-content-center row pt-5">
-                <div class="col-11 col-md-4">
-                  <Link to="/recipes"><button type="button" class="btn btn-success text-light col-12 me-md-2">Retournez à la liste des recettes</button></Link>
+            <div className="container">
+              <div className="d-flex flex-wrap justify-content-center row pt-5">
+                <div className="col-11 col-md-4">
+                  <Link to="/recipes"><button type="button" className="btn btn-success text-light col-12 me-md-2">Retournez à la liste des recettes</button></Link>
                   <div className="sticky-top">
                     <div className="pt-1"></div>
-                    <div class="card mt-3">
-                      <div class="card-body">
-                        <h5 class="card-title text-info pb-3">Ingrédients</h5>
-                        {ingredientsArray.map((ingredient)=> {
+                    <div className="card mt-3">
+                      <div className="card-body">
+                        <h5 className="card-title text-info pb-3">Ingrédients</h5>
+                        {ingredientsArray.map((ingredient, id)=> {
                           ingredient = ingredient[0].toUpperCase() + ingredient.slice(1);
                           return (
-                              <h6 class="card-subtitle mb-2 text-body-secondary py-1"><FontAwesomeIcon icon={faSquareCheck} className="px-2 text-success"/>{ingredient}</h6>
+                              <h6 key={id} className="card-subtitle mb-2 text-body-secondary py-1"><FontAwesomeIcon icon={faSquareCheck} className="px-2 text-success"/>{ingredient}</h6>
                           )
                           })
                         }
@@ -55,21 +55,20 @@ export const query = graphql`
                     <div className="pb-5"></div>
                   </div>
                 </div>
-                <div class="col-11 col-md-6">
+                <div className="col-11 col-md-6">
                   <h1 className="card-text text-center text-info">{name}</h1>
-                  {/* <small className="text-body-secondary fst-italic">{type}</small> */}
                   <GatsbyImage 
                   image={image} 
                   alt={name} 
                   placeholder="blurred" 
                   width={200}
                   height={200}
-                  class="d-flex flex-wrap justify-content-center rounded"/>
+                  className="d-flex flex-wrap justify-content-center rounded"/>
                   <div className="py-5">
-                    {stepsArray.map((step)=> {
+                    {stepsArray.map((step, id)=> {
                         step = step[0].toUpperCase() + step.slice(1);
                         return (
-                            <p><FontAwesomeIcon icon={faBookmark} className="px-2 text-success"/>{step}</p>
+                            <p key={id}><FontAwesomeIcon icon={faBookmark} className="px-2 text-success"/>{step}</p>
                         )
                       })
                     }
