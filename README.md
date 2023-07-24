@@ -11,3 +11,8 @@ Recipes website develop with GatsbyJS
 - GatsbyJS
 - Bootstrap
 - Contentful
+
+## Deployment
+
+Using Netlify
+Continous deployment when update content with Contentful webhook
