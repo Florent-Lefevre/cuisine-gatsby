@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
 Cuisine-Gatsby
 </h1>
@@ -7,7 +6,7 @@ Cuisine-Gatsby
 
 Recipes website develop with GatsbyJS
 
-### Built With
+## Built With
 
 - GatsbyJS
 - Bootstrap
