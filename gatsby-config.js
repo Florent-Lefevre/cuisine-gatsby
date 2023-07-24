@@ -14,7 +14,7 @@ module.exports = {
     heroe: `Qui ne s'est jamais perdu entre 2 publicités et 4 vidéos pour obtenir la liste des ingrédients de simple cookies. Vous trouverez ici mes recettes simples et approuvées.`,
     author: 'Florent',
     aboutMe: `Passionné par le cinéma, le jeu vidéo et de plus en plus par la cuisine 'amateur', j'ai voulu réalisé ce petit side project sous GatsbyJS. Je vais enfin pouvoir m'y retrouver dans mes recettes de cuisine. N'hésitez pas à me contacter !`,
-    email: `@mail`,
+    email: `florent.lefevre.pro@protonmail.com`,
     linkedin: `https://www.linkedin.com/in/florent-lefevre/`,
     github: `https://github.com/Florent-Lefevre`
   },
