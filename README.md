@@ -14,5 +14,5 @@ Recipes website develop with GatsbyJS
 
 ## Deployment
 
-Using Netlify
-Continous deployment when update content with Contentful webhook
+- Using Netlify
+- Continous deployment when update content with Contentful webhook

@@ -27,7 +27,7 @@ const Footer = () => {
                   <ul className="nav nav-pills align-items-center">
                       <li className="nav-item"><Link to ="/"><FontAwesomeIcon icon={faHouse} className="nav-link text-white text-white" /></Link></li>
                       <li className="nav-item"><Link to ="/recipes"  className="nav-link text-white">Mes recettes</Link></li>
-                      <li className="nav-item"><Link to ="/about"  className="nav-link text-white">A proposs</Link></li>
+                      <li className="nav-item"><Link to ="/about"  className="nav-link text-white">A propos</Link></li>
                   </ul>
                   <ul className="nav nav-pills align-items-center">
                       <a href={email} target="_blank"><li className="nav-item"><FontAwesomeIcon icon={faEnvelope} className="nav-link text-white"/></li></a>
